@@ -15,3 +15,11 @@
 *.synctex.gz
 *.toc
 *.vrb
+
+# Local/cache files
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Large temporary calibration arrays
+data/fig6_amp_calibrated/

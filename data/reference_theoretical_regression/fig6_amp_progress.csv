@@ -1,0 +1,3 @@
+J,Ka,S_in,n,M,operator,denoiser,trials,E_required_dB,pmd,pfa,pmd_standard_error,pfa_standard_error,mean_iterations,converged_fraction,elapsed_seconds,seed,status,config_key
+8,16,0.25,1024,512,dense-gaussian,or,2,2.40625,0.016129032258064516,0.0,0.015998430657150675,0.0,10.0,0.0,0.1472029685974121,12345,ok,d109d98da3477637
+8,16,0.5,512,512,dense-gaussian,or,2,1.671875,0.01639344262295082,0.0,0.016258514874769335,0.0,10.0,0.0,0.08236002922058105,12345,ok,6df25e72dc014913
