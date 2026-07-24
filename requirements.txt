@@ -1,0 +1,5 @@
+numpy>=1.22,<1.27
+scipy>=1.10
+matplotlib>=3.7
+numba>=0.58
+tqdm>=4.66
