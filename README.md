@@ -1,6 +1,24 @@
 # SPARCs for Unsourced Random Access
 
-This repository contains Python reproductions and simulation utilities for figures from "SPARCs for Unsourced Random Access" by Alexander Fengler, Peter Jung, and Giuseppe Caire. The code combines state-evolution calculations, replica-symmetric potential evaluations, tree-code simulations, and optimized finite-length AMP experiments for unsourced random access.
+This repository reproduces Figures 2-10 from ["SPARCs for Unsourced Random Access"](https://arxiv.org/abs/1901.06234) by Alexander Fengler, Peter Jung, and Giuseppe Caire.
+
+It contains the numerical code and saved outputs used for state-evolution calculations, replica-symmetric potential evaluations, power-allocation optimization, outer tree-code simulations, and finite-length AMP simulations.
+
+## Reproduced Figures
+
+Figures 2-10 have been reproduced. The main scripts are:
+
+| Figure | Script(s) | Main outputs |
+| --- | --- | --- |
+| 2 | `fig2.py` | `data/fig2_data/` |
+| 3 | `fig3.py`, `fig3_tree_decoder.py` | `data/fig3_data/` |
+| 4 | `fig4.py` | `plots/fig4.*`, `data/fig4_data.csv` |
+| 5 | `fig5.py` | `plots/fig5.*`, `data/fig5_data/` |
+| 6 | `fig6_theoretical.py`, `fig6_AMP_calibrated.py`, `fig6_AMP_optimized.py`, `fig6_plot_all_py.py` | `plots/fig6*`, `data/fig6_*` |
+| 7 | `fig7.py` | `plots/fig7.*`, `data/fig7_data/` |
+| 8 | `fig8.py`, `fig8a.py`, `fig8b.py`, `fig8_common.py` | `plots/fig8*`, `data/fig8/` |
+| 9 | `fig9_faithful_empirical_amp_tree.py` | `data/fig9/` |
+| 10 | `fig10.py` | `data/fig10/` |
 
 ## Setup
 
@@ -18,18 +36,28 @@ ml tqdm/4.66.1-GCCcore-12.3.0
 ml matplotlib/3.7.2-gfbf-2023a
 ```
 
-## Common Commands
+## Reproducing the Results
 
-Generate or refresh the optimized Figure 9 simulation:
+Completed simulation outputs are included in the repository. The commands below are representative entry points for validating, rerunning, resuming, or replotting the heavier computations.
+
+Validate the optimized finite-length simulations:
+
+```bash
+python fig9_faithful_empirical_amp_tree.py validate
+python fig10.py validate
+```
+
+Resume the optimized Figure 9 finite-length AMP/tree-code reproduction:
 
 ```bash
 python fig9_faithful_empirical_amp_tree.py production --resume
 ```
 
-Run Figure 10 theory only:
+Regenerate Figure 10 theory and plot outputs from the saved data:
 
 ```bash
 python fig10.py theory --fresh
+python fig10.py plot
 ```
 
 Resume the full Figure 10 empirical campaign:
@@ -38,25 +66,21 @@ Resume the full Figure 10 empirical campaign:
 python fig10.py production --trials 100 --workers 32 --resume
 ```
 
-Regenerate plots from existing saved data:
+## Repository Layout
 
-```bash
-python fig10.py plot
-```
+- `fig*.py`: figure-specific reproduction scripts.
+- `rs_potential.py`, `utils.py`: shared numerical helpers.
+- `data/`: saved numerical outputs, checkpoints, and figure-specific data.
+- `plots/`: generated plots for the earlier figures.
 
-Run validation checks:
+Figure 9 and Figure 10 store their final PNG/PDF outputs inside their corresponding `data/fig9/` and `data/fig10/` folders.
 
-```bash
-python fig9_faithful_empirical_amp_tree.py validate
-python fig10.py validate
-```
+## Faithfulness and Assumptions
 
-## Outputs
+The objective is to reproduce the published numerical results as closely as possible from the information provided in the paper. Where an implementation detail is not specified, the corresponding assumption is documented in the code.
 
-Generated plot data and figures are stored with their corresponding figure folders:
+For the large finite-length AMP simulations, a structured randomized Hadamard sensing operator is used for computational feasibility. The paper's analysis assumes i.i.d. Gaussian sensing matrices with entries `N(0, 1/n)`, so these finite-length simulations should not be interpreted as an exact realization of the paper's Gaussian matrix ensemble.
 
-- `data/fig9/`: Figure 9 CSVs, checkpoint, PNG, and PDF.
-- `data/fig10/`: Figure 10 theory/empirical CSVs, checkpoint, allocation metadata, PNG, and PDF.
-- `data/fig9_debug/`: debug-mode Figure 9 outputs.
+## Reference
 
-The optimized finite-length simulations use a structured Hadamard sensing operator for computational feasibility; this is not the exact dense i.i.d. Gaussian ensemble assumed in the paper.
+Alexander Fengler, Peter Jung, and Giuseppe Caire, "SPARCs for Unsourced Random Access," arXiv:1901.06234.
