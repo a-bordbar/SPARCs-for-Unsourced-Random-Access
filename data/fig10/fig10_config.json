@@ -1,0 +1,45 @@
+{
+  "config": {
+    "Ka_values": [
+      50,
+      100,
+      150,
+      200,
+      250,
+      300
+    ],
+    "pe_target": 0.05,
+    "delta": 50,
+    "j20_n": 26229,
+    "trials": 100,
+    "workers": 12,
+    "empirical_search": {
+      "min_db": 2.0,
+      "max_db": 6.0,
+      "coarse_step_db": 0.25,
+      "refine_tol_db": 0.05
+    },
+    "se_min_db": 2.0,
+    "se_max_db": 6.0,
+    "se_coarse_step_db": 0.1,
+    "se_refine_tol_db": 0.002,
+    "epsilon": 0.01,
+    "pa_delta": 0.1,
+    "candidate_power_count": 201,
+    "lp_eta_points": 120,
+    "mmse_table_points": 1001,
+    "eta_search_points": 10000,
+    "amp_progress": false,
+    "progress": false,
+    "plot_every": 1,
+    "placement": "last",
+    "average_power_placements": false
+  },
+  "assumptions": [
+    "Figure 10 caption says J=20, B=89, n=26229 while Section X prose says n=26226; default is n=26229.",
+    "The paper does not state the Monte Carlo trial count; this script uses the configured --trials value.",
+    "The paper specifies the power distribution but not finite-L placement; default places strongest sections last.",
+    "Section X refers to the Section VIII power-allocation method but does not restate epsilon/delta; defaults are epsilon=0.01, delta=0.1.",
+    "Finite-length empirical simulation uses the structured Hadamard operator from Figure 9 for computational feasibility, not dense i.i.d. Gaussian matrices."
+  ]
+}

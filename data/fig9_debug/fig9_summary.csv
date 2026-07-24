@@ -1,5 +1,13 @@
 allocation,EbN0_dB,N_trials,Pe_mean,Pe_standard_error,Pe_median,total_missing_users,total_user_transmissions,Pe_total_missing_over_users,mean_equals_total_ratio_constant_Ka,AMP_convergence_fraction,tree_overflow_fraction,oversized_final_list_fraction,mean_AMP_iterations,mean_final_list_size
-2-level power allocation,4.0,2,0.03333333333333333,0.0,0.03333333333333333,20,600,0.03333333333333333,True,1.0,0.0,0.0,63.0,290.0
-2-level power allocation,5.0,2,0.0,0.0,0.0,0,600,0.0,True,1.0,0.0,0.0,25.0,300.0
-flat power allocation,4.0,2,0.9933333333333334,0.0033333333333333544,0.9933333333333334,596,600,0.9933333333333333,True,0.5,0.0,0.0,80.5,2.5
-flat power allocation,5.0,2,0.0,0.0,0.0,0,600,0.0,True,1.0,0.0,0.0,30.0,300.0
+2-level power allocation,3.0,1,1.0,0.0,1.0,300,300,1.0,True,1.0,0.0,0.0,47.0,2.0
+2-level power allocation,3.5,1,1.0,0.0,1.0,300,300,1.0,True,1.0,0.0,0.0,67.0,0.0
+2-level power allocation,4.0,1,0.03333333333333333,0.0,0.03333333333333333,10,300,0.03333333333333333,True,1.0,0.0,0.0,65.0,290.0
+2-level power allocation,4.5,1,0.006666666666666667,0.0,0.006666666666666667,2,300,0.006666666666666667,True,1.0,0.0,0.0,34.0,298.0
+2-level power allocation,5.0,1,0.0,0.0,0.0,0,300,0.0,True,1.0,0.0,0.0,26.0,300.0
+2-level power allocation,5.5,1,0.0,0.0,0.0,0,300,0.0,True,1.0,0.0,0.0,19.0,300.0
+flat power allocation,3.0,1,1.0,0.0,1.0,300,300,1.0,True,1.0,0.0,0.0,35.0,0.0
+flat power allocation,3.5,1,0.9966666666666667,0.0,0.9966666666666667,299,300,0.9966666666666667,True,1.0,0.0,0.0,45.0,2.0
+flat power allocation,4.0,1,0.9966666666666667,0.0,0.9966666666666667,299,300,0.9966666666666667,True,1.0,0.0,0.0,61.0,2.0
+flat power allocation,4.5,1,0.99,0.0,0.99,297,300,0.99,True,0.0,0.0,0.0,100.0,4.0
+flat power allocation,5.0,1,0.0,0.0,0.0,0,300,0.0,True,1.0,0.0,0.0,32.0,300.0
+flat power allocation,5.5,1,0.0,0.0,0.0,0,300,0.0,True,1.0,0.0,0.0,21.0,300.0
