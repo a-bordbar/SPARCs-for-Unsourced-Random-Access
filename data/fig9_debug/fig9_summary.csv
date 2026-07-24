@@ -1,0 +1,5 @@
+allocation,EbN0_dB,N_trials,Pe_mean,Pe_standard_error,Pe_median,total_missing_users,total_user_transmissions,Pe_total_missing_over_users,mean_equals_total_ratio_constant_Ka,AMP_convergence_fraction,tree_overflow_fraction,oversized_final_list_fraction,mean_AMP_iterations,mean_final_list_size
+2-level power allocation,4.0,2,0.03333333333333333,0.0,0.03333333333333333,20,600,0.03333333333333333,True,1.0,0.0,0.0,63.0,290.0
+2-level power allocation,5.0,2,0.0,0.0,0.0,0,600,0.0,True,1.0,0.0,0.0,25.0,300.0
+flat power allocation,4.0,2,0.9933333333333334,0.0033333333333333544,0.9933333333333334,596,600,0.9933333333333333,True,0.5,0.0,0.0,80.5,2.5
+flat power allocation,5.0,2,0.0,0.0,0.0,0,600,0.0,True,1.0,0.0,0.0,30.0,300.0
